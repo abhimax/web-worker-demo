@@ -1,11 +1,14 @@
+import { useState } from "react";
 import "./App.css";
+import Calculator from "./Calculator";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>TODO - React webworker demo</div>
+      <h1>Web Worker Calculation Demo</h1>
+      <Calculator />
     </>
   );
 }
