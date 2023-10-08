@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Calculator() {
   const [result, setResult] = useState(null);
+  const [count, setCount] = useState(0);
 
   const calculate = () => {
     // Create a new Web Worker
@@ -21,7 +22,15 @@ function Calculator() {
   return (
     <div>
       <button onClick={calculate}>Start Calculation</button>
-      {result && <p>Result: {result}</p>}
+      {result && <h2>Result: {result}</h2>}
+      <h2>Click to increment. This feature works even during calculations.</h2>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        {count}
+      </button>
     </div>
   );
 }
