@@ -15,7 +15,7 @@ function Calculator() {
     };
 
     // Start the calculation in the worker
-    worker.postMessage("test");
+    worker.postMessage(10);
   };
 
   return (
