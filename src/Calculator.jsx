@@ -6,7 +6,7 @@ function Calculator() {
 
   const calculate = () => {
     // Create a new Web Worker
-    const worker = new Worker("./src/calculation-worker.js");
+    const worker = new Worker("./src/workers/calculation-worker.js");
 
     // Define what to do when the worker sends a message
     worker.onmessage = function (e) {
